@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saunders Droid Factory</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Main Style -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class="header">
+        <div class="container head">
+            <div class="row">
+                
+                <div class="col-xs-2">
+                    <div class="banner">
+                        <div class="first_icon">
+                        </div>
+                        <div class="fb_info">FIRST ROBOTICS COMPETITION</div>
+                        WINNER
+                        <div class="fb_event">
+                         <div id="year">2015</div>
+                         <div id="event">New York City</div>
+                         <div id="type">Regional</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-xs-8">
+                    <div class="logo"></div>
+                    
+                </div>
+                <div class="col-xs-2">
+                <div class="banner">
+                        <div class="first_icon">
+                        </div>
+                        <div class="fb_info">FIRST ROBOTICS COMPETITION</div>
+                        WINNER
+                        <div class="fb_event">
+                         <div id="year">2009</div>
+                         <div id="event">New Jersey</div>
+                         <div id="type">Regional</div>
+                        </div>
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+    </header>
+   <nav class="navbar navbar-default navbar-white">
+  <div class="container-fluid nav-header">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <body>
+      <section id="welcome-section">
+        <div class="robot-featured">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-xs-offset-3 col-xs-6">
+                        <div class="robot-info">
+                            <div class="ri-name">Malone</div>
+                            <div class="ri-event">New York Regional</div>
+                            <div class="ri-place">
+                                <div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-danger featured-stat-red"><b>7</b> Wins</button>
+  <button type="button" class="btn btn-default featured-stat-white">Playoffs: QuarterFinalist</button>
+  <button type="button" class="btn btn-info featured-stat-blue"><b>6</b> Losses</button>
+</div></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+          </div>      
+        </section>
+      </body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+
+    var menu = $('.navbar');
+    var origOffsetY = menu.offset().top;
+
+    function scroll() {
+        if ($(window).scrollTop() >= origOffsetY) {
+            $('.navbar').removeClass('navbar-default');
+            $('.navbar').addClass('navbar-fixed-top');
+        } else {
+            $('.navbar').removeClass('navbar-fixed-top');
+            $('.navbar').addClass('navbar-default');
+        }
+
+
+    }
+
+    document.onscroll = scroll;
+
+});
+        $(document).ready(function(){
+    
+	var clickEvent = false;
+	$('#myCarousel').carousel({
+		interval:   4000	
+	}).on('click', '.list-group li', function() {
+			clickEvent = true;
+			$('.list-group li').removeClass('active');
+			$(this).addClass('active');		
+	}).on('slid.bs.carousel', function(e) {
+		if(!clickEvent) {
+			var count = $('.list-group').children().length -1;
+			var current = $('.list-group li.active');
+			current.removeClass('active').next().addClass('active');
+			var id = parseInt(current.data('slide-to'));
+			if(count == id) {
+				$('.list-group li').first().addClass('active');	
+			}
+		}
+		clickEvent = false;
+	});
+})
+
+$(window).load(function() {
+    var boxheight = $('#myCarousel .carousel-inner').innerHeight();
+    var itemlength = $('#myCarousel .item').length;
+    var triggerheight = Math.round(boxheight/itemlength+1);
+	$('#myCarousel .list-group-item').outerHeight(triggerheight);
+});
+      </script>
+  </body>
+</html>
