@@ -155,7 +155,7 @@ body{
 
 .robot-featured {
     background:linear-gradient( rgba(0, 0, 0, 0.69), rgba(0, 0, 0, 0.77) ), url(../images/banner-featured.png);
-    height:300px;
+    height:250px;
     margin-top:-20px;
 }
 
@@ -192,4 +192,71 @@ body{
     box-shadow: 0px 5px 0px #01578d;
     border: 1px solid #01578d;
     background:#0075be;
+}
+
+
+
+.dropdown-menu>li>a .subtitle {
+    font-size:12px;
+    margin-left:-10px;
+    color:blue;
+}
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.page {
+    margin-top:10px;
+}
+
+.featurette {
+    margin-top:10px;
+}
+
+
+
+.pic-1 {
+   background:linear-gradient(rgba(0, 0, 0, 0.72),rgba(0, 0, 0, 0.68)), url(../images/Screenshot_20170419-133830.png); 
+    background-position:center;
+}
+
+.pic-2 {
+   background:linear-gradient(rgba(0, 0, 0, 0.72),rgba(0, 0, 0, 0.68)), url(../images/IMG_4229.jpg); 
+    background-position:contain;
+}
+
+.pic-3 {
+   background:linear-gradient(rgba(0, 0, 0, 0.72),rgba(0, 0, 0, 0.68)), url(/assets/images/Screenshot_20170419-133830.png); 
+    background-position:center;
+}
+
+.pic-4 {
+   background:linear-gradient(rgba(0, 0, 0, 0.72),rgba(0, 0, 0, 0.68)), url(/assets/images/Screenshot_20170419-133830.png); 
+    background-position:center;
+}
+.featured-container {
+    height:250px;
+    font-size:24px;
+    color:aliceblue;
+}
+
+.featured-info {
+   text-align: center;
+    padding:50px;
+}
+
+.featured-icon {
+  
+    font-size:70px;
+}
+
+.featured-desc {
+    font-family:'Martel', serif;
+    font-weight:bold;
 }
